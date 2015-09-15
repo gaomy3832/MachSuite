@@ -1,1 +1,4 @@
 output.data
+vivado_hls.log
+*_syn/
+*_hls/
