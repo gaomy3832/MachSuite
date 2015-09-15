@@ -27,5 +27,9 @@ build:
 run:
 	@( for b in $(BENCHMARKS); do $(MAKE) -C $$b run || exit ; done )
 
+hls:
+	@( for b in $(BENCHMARKS); do $(MAKE) -C $$b hls || exit ; done )
+
 clean:
 	@( for b in $(BENCHMARKS); do $(MAKE) -C $$b clean || exit ; done )
+
