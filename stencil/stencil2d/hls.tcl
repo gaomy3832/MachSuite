@@ -13,6 +13,5 @@ create_clock -period 10
 source ./stencil_dir
 
 csynth_design
-cosim_design -rtl verilog -tool modelsim -trace_level all
 
 exit
