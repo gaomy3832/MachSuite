@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <math.h>
 
-#define TYPE double
+#include <ap_fixed.h>
+#define TYPE ap_fixed<64, 40>
 
 //Number of times you train the network with the same data set
 #define EPOCS 100
@@ -22,10 +23,10 @@
 #define SIZE_OUT 10
 
 //Learning Rate
-#define N 0.5
+#define N TYPE(0.5)
 
 //Momentum
-#define M 0.1
+#define M TYPE(0.1)
 
 static const int layer_size[] = {SIZE_IN, MAX_COLS, SIZE_OUT};
 

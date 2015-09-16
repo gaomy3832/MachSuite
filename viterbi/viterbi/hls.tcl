@@ -1,6 +1,6 @@
 open_project viterbi_syn
 
-add_files viterbi.c
+add_files viterbi.cpp
 add_files input.data
 add_files check.data
 add_files -tb ../../common/harness.c

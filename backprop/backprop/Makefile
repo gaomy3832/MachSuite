@@ -4,7 +4,7 @@ net: net.c net.h ../../common/harness.c
 run: net input.data check.data
 	./net input.data check.data
 
-hls: net.c net.h
+hls: net.cpp net.h
 	vivado_hls hls.tcl
 
 clean:

@@ -1,6 +1,6 @@
 open_project net_hls
 
-add_files net.c
+add_files net.cpp
 add_files input.data
 add_files check.data
 add_files -tb ../../common/harness.c

@@ -1,12 +1,18 @@
 #include "net.h"
+#include "fixed_point/neural_net.h"
 
 //Activation function..
 TYPE sigmoid(TYPE x){
-    TYPE temp, one;
-    one = (double)1.0;
-    temp = one + exp(-x);
-    temp = one/temp;
-    return temp;
+
+    fixed_t xx = x;
+    TYPE res = lut_sigmoid(xx);
+    return res;
+
+    //TYPE temp, one;
+    //one = (double)1.0;
+    //temp = one + exp(-x);
+    //temp = one/temp;
+    //return temp;
 }
 
 void update_layer(int numIn, int numOut, TYPE weightsIn[MAX_ROWS][MAX_COLS], TYPE activationsIn[], TYPE activationsOut[]){
@@ -131,7 +137,7 @@ TYPE comp_error(TYPE *targets, TYPE *activations){
 
     ce_1 :for(i = 0; i < SIZE_OUT; i++){
         temp = targets[i] - activations[i];
-        error = error + 0.5*temp*temp;
+        error = error + TYPE(0.5)*temp*temp;
     }
 
     return error;

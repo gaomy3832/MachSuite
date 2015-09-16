@@ -4,7 +4,7 @@ viterbi: viterbi.c viterbi.h ../../common/harness.c
 run: viterbi input.data check.data
 	./viterbi input.data check.data
 
-hls: viterbi.c viterbi.h
+hls: viterbi.cpp viterbi.h
 	vivado_hls hls.tcl
 
 clean:

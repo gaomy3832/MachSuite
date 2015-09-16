@@ -40,7 +40,8 @@ http://www.cs.berkeley.edu/~mhoemmen/matrix-seminar/slides/UCB_sparse_tutorial_1
 #define NNZ 1666
 #define N 494
 
-#define TYPE double
+#include <stdint.h>
+#define TYPE uint64_t
 
 void spmv(TYPE val[NNZ], int cols[NNZ], int rowDelimiters[N + 1],
           TYPE vec[N], TYPE out[N]);
