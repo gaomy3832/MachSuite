@@ -35,16 +35,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define numStates 32
 #define numObs 128
 
-int viterbi(int Obs[numObs], float transMat[numStates*numObs], float obsLik[numStates*numObs], float v[numStates*numObs]);
+typedef float TYPE;
+
+int viterbi(int Obs[numObs], TYPE transMat[numStates*numObs], TYPE obsLik[numStates*numObs], TYPE v[numStates*numObs]);
 
 ////////////////////////////////////////////////////////////////////////////////
 // Test harness interface code.
 
 struct bench_args_t {
         int Obs[numObs];
-        float transMat[numStates*numObs];
-        float obsLik[numStates*numObs];
-        float v[numStates*numObs];
+        TYPE transMat[numStates*numObs];
+        TYPE obsLik[numStates*numObs];
+        TYPE v[numStates*numObs];
 };
 int INPUT_SIZE = sizeof(struct bench_args_t);
 

@@ -30,10 +30,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "viterbi.h"
 
-int viterbi(int Obs[numObs], float transMat[numStates*numObs],
-  float obsLik[numStates*numObs], float v[numStates*numObs]){
+int viterbi(int Obs[numObs], TYPE transMat[numStates*numObs],
+  TYPE obsLik[numStates*numObs], TYPE v[numStates*numObs]){
     int i, j, k, finalState;
-    float maxProb, temp;
+    TYPE maxProb, temp;
 
     finalState = 0;
 
@@ -51,7 +51,7 @@ int viterbi(int Obs[numObs], float transMat[numStates*numObs],
         }
     }
 
-    maxProb = (float)0.0;
+    maxProb = (TYPE)0.0;
 
     v4 : for(i=1;i<numStates+1;i++){
         if(v[i*numObs-1] > maxProb){
