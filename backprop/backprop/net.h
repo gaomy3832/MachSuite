@@ -23,10 +23,10 @@
 #define SIZE_OUT 10
 
 //Learning Rate
-#define N TYPE(0.5)
+#define N (TYPE)0.5
 
 //Momentum
-#define M TYPE(0.1)
+#define M (TYPE)0.1
 
 static const int layer_size[] = {SIZE_IN, MAX_COLS, SIZE_OUT};
 
