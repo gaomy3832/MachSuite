@@ -4,7 +4,7 @@ crs: crs.c crs.h ../../common/harness.c
 run: crs input.data check.data
 	./crs input.data check.data
 
-hls: crs.c crs.h	
+hls: crs.cpp crs.h	
 	vivado_hls hls.tcl
 
 clean:

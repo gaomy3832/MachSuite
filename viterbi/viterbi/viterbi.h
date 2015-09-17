@@ -36,7 +36,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define numObs 128
 
 #include <ap_fixed.h>
-typedef ap_fixed<32, 20> TYPE;
+typedef ap_fixed<48, 32> TYPE;
 
 int viterbi(int Obs[numObs], TYPE transMat[numStates*numObs], TYPE obsLik[numStates*numObs], TYPE v[numStates*numObs]);
 

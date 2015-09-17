@@ -1,6 +1,6 @@
 open_project crs_syn
 
-add_files crs.c
+add_files crs.cpp
 add_files input.data
 add_files check.data
 add_files -tb ../../common/harness.c

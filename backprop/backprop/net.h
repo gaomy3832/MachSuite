@@ -3,7 +3,7 @@
 #include <math.h>
 
 #include <ap_fixed.h>
-#define TYPE ap_fixed<64, 40>
+#define TYPE ap_fixed<48, 32>
 
 //Number of times you train the network with the same data set
 #define EPOCS 100
