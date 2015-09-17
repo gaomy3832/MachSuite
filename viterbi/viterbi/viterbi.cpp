@@ -29,6 +29,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 #include "viterbi.h"
+#include "fixed_point/common.h"
 
 int viterbi(int Obs[numObs], TYPE transMat[numStates*numObs],
   TYPE obsLik[numStates*numObs], TYPE v[numStates*numObs]){
